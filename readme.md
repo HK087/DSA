@@ -1,2 +1,0 @@
-# DSA
-Daily Problem Solving 
