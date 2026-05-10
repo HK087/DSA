@@ -17,22 +17,22 @@ vector<int> twoSum(int n, int target,vector<int>arr)
     return {-1};
 }
 
-// OPTIMISED APPROACH  T.C => [ O(N) ]
-// vector<int> twoSum(int n, int target, vector<int> arr)
-// {
-//     unordered_map<int, int> seen;
-//     for (int i = 0; i < n; i++)
-//     {
-//         int complement = target - arr[i];
+//OPTIMISED APPROACH  T.C => [ O(N) ]
+vector<int> twoSum(int n, int target, vector<int> arr)
+{
+    unordered_map<int, int> seen;
+    for (int i = 0; i < n; i++)
+    {
+        int complement = target - arr[i];
 
-//         if (seen.count(complement))
-//         {
-//             return {seen[complement], i};
-//         }
-//         seen[arr[i]] = i;
-//     }
-//     return {-1};
-// }
+        if (seen.count(complement))
+        {
+            return {seen[complement], i};
+        }
+        seen[arr[i]] = i;
+    }
+    return {-1};
+}
 
 int main()
 {

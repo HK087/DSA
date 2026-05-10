@@ -1,1 +1,2 @@
-##DAILY DSA PROBLEM SOLVING
+# DSA
+Daily Problem Solving 
