@@ -236,16 +236,6 @@ Primary language for:
  DSA implementations
  Performance-oriented solutions
 
-### Python
-
-Used for:
-
- Algorithm experimentation
- Problem solving
- Understanding implementations at a higher level
-
-
-
 # 🏆 Practice Platforms
 
 Problems and concepts are practiced across multiple platforms:
