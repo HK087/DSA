@@ -13,6 +13,8 @@ string minWindow(string s, string t)
     for (char c : t)
         hash[c]++;
 
+    // Getting the characters in t mapped to the hash vector.
+
     int count = 0, l = 0, r = 0;
     int minLen = INT_MAX, startIndex = -1;
 
@@ -23,16 +25,17 @@ string minWindow(string s, string t)
         hash[s[r]]--;
 
         while (count == m)
-        {
+        { // 1. Record the smallest valid window found so far.
             if (r - l + 1 < minLen)
             {
                 minLen = r - l + 1;
                 startIndex = l;
             }
-            hash[s[l]]++;
-            if (hash[s[l]] > 0)
-                count--;
-            l++;
+            // 2. Remove s[l] from the window by moving left pointer forward.
+            hash[s[l]]++; // <-- KEY: "put back" the character.
+            if (hash[s[l]] > 0) // <-- KEY: did we now need this char again?
+                count--; //     if so, window is no longer valid
+            l++; // move left pointer forward
         }
         r++;
     }
